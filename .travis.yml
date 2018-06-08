@@ -14,5 +14,9 @@ before_install:
   # Prepare rosdep to install dependencies.
   - sudo rosdep init
   - rosdep update
+  # Pangolin
+  - apt-get install -y libglew-dev	cmake libpython2.7-dev build-essential g++
+  - git clone https://github.com/stevenlovegrove/Pangolin.git
+  - cd Pangolin && mkdir build && cd build && cmake .. && cmake --build .
   
 script: ./build.sh
