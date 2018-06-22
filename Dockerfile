@@ -34,7 +34,9 @@ RUN apt-get update && apt-get install -y \
 
 RUN git clone https://github.com/ICRA2017/SSM_LinearArray.git
 
-RUN cd SSM_LinearArray && chmod +x build.sh && ./build.sh
+RUN cd SSM_LinearArray && ./build.sh
+
+RUN cd SSM_LinearArray && chmod a+x build_ROS.sh
 
 RUN source /opt/ros/indigo/setup.bash && export ROS_PACKAGE_PATH=/SSM_LinearArray/ROS:$ROS_PACKAGE_PATH \
-	&& cd SSM_LinearArray && chmod +x build_ROS.sh && ./build_ROS.sh
+	&& cd SSM_LinearArray && ./build_ROS.sh
