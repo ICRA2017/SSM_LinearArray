@@ -1,5 +1,7 @@
 # SSM\_LinearArray
 
+[![Docker Build Status](https://img.shields.io/docker/build/icra2017/ssm_lineararray.svg)](https://hub.docker.com/r/icra2017/ssm_lineararray/)
+
 ## Video showing SSM\_LinearArray :
 
 (Click on the image below to watch the youtube video or click [here](https://youtu.be/Ry_i3kmvlHM)) 
@@ -146,3 +148,7 @@ Need to change the setting files with the calibration of your sensor. The settin
 In this implementation, SRP-PHAT is used for the sound source DOA estimation. The microphone array transfer function is based on geometric locations of microphones. For those who want to achieve better DOA estimation accuracy, the pre-recoded transfer function of the microphone array should be used instead of the geometric locations of microphones. In this case, we recommend using [HARK](http://www.hark.jp/) to estimation DOA angle using the pre-recorded transfer function. The installation and usage of HARK can be found on the [HARK online documentation](http://www.hark.jp/wiki.cgi?page=HARK+Documentation).
 
 To use another sound source DOA estimation algorithm (HARK as an example), the HARK ROS node should subscribe to the topic "/microphone\_array\_raw" which publishes raw multi channel audio data. Then, pulish the DOA likelihood w.r.t. each angle to the topic "/srp\_phat\_fd\_value". You can rename the output ROS topic name to something more meaningful in you case.
+
+# Run in Docker
+
+Coming soon.
