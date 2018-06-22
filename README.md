@@ -1,6 +1,6 @@
 # SSM\_LinearArray
 
-##Video showing SSM\_LinearArray :
+## Video showing SSM\_LinearArray :
 
 (Click on the image below to watch the youtube video or click [here](https://youtu.be/Ry_i3kmvlHM)) 
 
@@ -24,7 +24,7 @@ alt="DataArena DataSet" width="240" height="180" border="10" /></a>
 
 -->
 
-#1. License
+# 1. License
 
 SSM\_LinearArray is released under a [GPLv3 license](https://github.com/daobilige-su/SSM_LinearArray/blob/master/License-gpl.txt). For a list of all code/library dependencies (and associated licenses), please see [Dependencies.md](https://github.com/daobilige-su/SSM_LinearArray/blob/master/Dependencies.md).
 
@@ -45,7 +45,7 @@ If you use SSM\_LinearArray in an academic work, please cite:
      }
 -->
 
-#2. Prerequisites
+# 2. Prerequisites
 I tested the library in **14.04**, but it should be easy to compile in other platforms. A powerful computer (e.g. i7) will ensure real-time performance and provide more stable and accurate results.
 
 ## C++11 or C++0x Compiler
@@ -82,7 +82,7 @@ Modified versions of the [DBoW2](https://github.com/dorian3d/DBoW2) library are 
 sudo apt-get install python-pyaudio
 ```
 
-#3. Installation
+# 3. Installation
 
 Clone the repository:
 ```
@@ -98,7 +98,7 @@ chmod +x build.sh
 
 This will create **libSSM\_LinearArray.so**, **libcsparse_extension**  at *lib* folder and other executables in *ROS/SSM\_LinearArray/bin* folder.
 
-#4. Run
+# 4. Run
 
 ## Running the pre-recorded data
 In the case of Kinect, run the following commands in terminal:
@@ -139,10 +139,10 @@ In the case of PS3-Eye, run the following commands in terminal:
 roslaunch SSM_LinearArray ps3eye+ssmlineararray.launch 
 ```
   
-#5. Processing your own sequences
+# 5. Processing your own sequences
 Need to change the setting files with the calibration of your sensor. The setting files are inside the folder *ROS/SSM\_LinearArray/config*. The calibration model of OpenCV is used for camera calibration. 
 
-#6. To use other sound sources Direction of Arrival (DOA) estimation algorithms
+# 6. To use other sound sources Direction of Arrival (DOA) estimation algorithms
 In this implementation, SRP-PHAT is used for the sound source DOA estimation. The microphone array transfer function is based on geometric locations of microphones. For those who want to achieve better DOA estimation accuracy, the pre-recoded transfer function of the microphone array should be used instead of the geometric locations of microphones. In this case, we recommend using [HARK](http://www.hark.jp/) to estimation DOA angle using the pre-recorded transfer function. The installation and usage of HARK can be found on the [HARK online documentation](http://www.hark.jp/wiki.cgi?page=HARK+Documentation).
 
 To use another sound source DOA estimation algorithm (HARK as an example), the HARK ROS node should subscribe to the topic "/microphone\_array\_raw" which publishes raw multi channel audio data. Then, pulish the DOA likelihood w.r.t. each angle to the topic "/srp\_phat\_fd\_value". You can rename the output ROS topic name to something more meaningful in you case.
