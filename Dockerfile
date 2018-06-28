@@ -27,7 +27,7 @@ RUN git clone https://github.com/stevenlovegrove/Pangolin.git \
 
 RUN apt-get update && apt-get install -y \
 	libeigen3-dev libblas-dev liblapack-dev \
-	libsuitesparse-dev \
+	libsuitesparse-dev python-matplotlib \
 	&& rm -rf /var/lib/apt/lists	
 		
 # Installation
