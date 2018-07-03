@@ -150,10 +150,12 @@ In this implementation, SRP-PHAT is used for the sound source DOA estimation. Th
 To use another sound source DOA estimation algorithm (HARK as an example), the HARK ROS node should subscribe to the topic "/microphone\_array\_raw" which publishes raw multi channel audio data. Then, pulish the DOA likelihood w.r.t. each angle to the topic "/srp\_phat\_fd\_value". You can rename the output ROS topic name to something more meaningful in you case.
 
 # Run in Docker
-An X-server must be running in the host system, and permission for connections must be granted. 
+An X-server must be running in the host system, and permission for connections must be granted.
+
 For more secure configurations, see [this tutorial](http://wiki.ros.org/docker/Tutorials/GUI#Using_X_server).
 Download [an example rosbag file of mapping 2 sound sources](https://mega.nz/#!LpQHQAKY!ieHMVTvn84osptAr9ib6di18QmPL1oZ0KKhQdE_CNZg)(1GB) 
 into a local folder, e.g. `/DATA/SSM_linearArray/`.
+
 ```
 $ docker run -it --rm --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" \
 --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
