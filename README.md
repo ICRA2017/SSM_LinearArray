@@ -161,5 +161,5 @@ $ docker run -it --rm --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" \
 icra2017/ssm_lineararray
 root@c71ff0af77f9:/# export ROS_PACKAGE_PATH=/SSM_LinearArray/ROS/:$ROS_PACKAGE_PATH
 root@c71ff0af77f9:/# roslaunch SSM_LinearArray freenectrosbag+ssmlineararray.launch &
-root@c71ff0af77f9:/# rosbag play /DATA/SSM_linearArray/icradata_kinect_2src_2.bag
+root@c71ff0af77f9:/# rosbag play /DATA/SSM_LinearArray/icradata_kinect_2src_2.bag
 ```
