@@ -157,7 +157,7 @@ into a local folder, e.g. `/DATA/SSM_linearArray/`.
 ```
 $ docker run -it --rm --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" \
 --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
---volume="/home/ecervera/Desktop/DATA:/DATA:ro" \
+--volume="/DATA:/DATA:ro" \
 icra2017/ssm_lineararray
 root@c71ff0af77f9:/# export ROS_PACKAGE_PATH=/SSM_LinearArray/ROS/:$ROS_PACKAGE_PATH
 root@c71ff0af77f9:/# roslaunch SSM_LinearArray freenectrosbag+ssmlineararray.launch &
