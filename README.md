@@ -163,3 +163,4 @@ root@c71ff0af77f9:/# export ROS_PACKAGE_PATH=/SSM_LinearArray/ROS/:$ROS_PACKAGE_
 root@c71ff0af77f9:/# roslaunch SSM_LinearArray freenectrosbag+ssmlineararray.launch &
 root@c71ff0af77f9:/# rosbag play /DATA/SSM_LinearArray/icradata_kinect_2src_2.bag
 ```
+[![demo video](https://img.youtube.com/vi/nHszHmIvyuQ/0.jpg)](http://www.youtube.com/watch?v=nHszHmIvyuQ)
