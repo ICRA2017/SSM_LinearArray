@@ -154,7 +154,7 @@ An X-server must be running in the host system, and permission for connections m
 For more secure configurations, see [this tutorial](http://wiki.ros.org/docker/Tutorials/GUI#Using_X_server).
 
 Download [an example rosbag file of mapping 2 sound sources](https://mega.nz/#!LpQHQAKY!ieHMVTvn84osptAr9ib6di18QmPL1oZ0KKhQdE_CNZg)(1GB) 
-into a local folder, e.g. `/DATA/SSM_linearArray/`.
+into a local folder, e.g. `/DATA/SSM_LinearArray/`.
 
 ```
 $ docker run -it --rm --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" \
